@@ -22,6 +22,7 @@ namespace LinkedList
             {
                 Console.WriteLine("Node is absent!");
             }
+            list.DeleteNodeAtParticularPosition(2);
 
 
 
