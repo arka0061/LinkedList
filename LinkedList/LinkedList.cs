@@ -145,6 +145,23 @@ namespace LinkedList
                 ptr.next = newNode;
             }
         }
+        public void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Length of LinkedList is :-" + " " + count);
+        }
 
 
     }

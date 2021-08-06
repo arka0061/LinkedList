@@ -25,8 +25,6 @@ namespace LinkedList
 
 
 
-
-
             // list.InsertAtParticularPosition(1, 30);
             // list.PopLastElement();
                    
