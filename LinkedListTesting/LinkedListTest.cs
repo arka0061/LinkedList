@@ -32,5 +32,17 @@ namespace LinkedListTesting
             Assert.AreEqual(1, checkAgain);
                 
          }
+        [Test]
+        public void TestIfSize_Is_3()
+        {
+            LinkedLists list = new LinkedLists();
+            list.Add(56);
+            list.Add(30);
+            list.Add(40);
+            list.Add(70);         
+            list.DeleteNodeAtParticularPosition(2);
+            int check = list.Size();
+            Assert.AreEqual(3,check);
+        }
     } 
 }
