@@ -7,12 +7,17 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Assignment!");
-            LinkedList list = new LinkedList();
+            LinkedLists list = new LinkedLists();
             list.Add(56);
             list.Add(70);
             list.InsertAtParticularPosition(1, 30);
-            list.Pop();
-            list.Display();
+            list.PopLastElement();
+            list.Display();         
+            int check = list.Search(30);
+            if(check==1)
+            {
+                Console.WriteLine("Element is Present");
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedList
 {
-    public class LinkedList
+    public class LinkedLists
     {
         internal Node head;
         public void Add(int data)
@@ -64,7 +64,7 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
-        internal Node Pop()
+        public Node Pop()
         {
             if (this.head == null)
             {
@@ -72,6 +72,43 @@ namespace LinkedList
             }
             this.head = this.head.next;
             return this.head;
+        }
+
+        public Node PopLastElement()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+        }
+        public int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                     count++;
+                     break;
+                }
+                node = node.next;
+                
+            }
+            return count;
+          
         }
 
 
