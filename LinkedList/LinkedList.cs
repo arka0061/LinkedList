@@ -110,6 +110,41 @@ namespace LinkedList
             return count;
           
         }
+        public void insertAtMid(int value)
+        {
+            // if list is empty
+            if (head == null)
+                head = new Node(value);
+            else
+            {
+                // get a new node
+                Node newNode = new Node(value);
+                Node ptr = head;
+                int len = 0;
+                // calculate length of the linked list
+                //, i.e, the number of nodes
+                while (ptr != null)
+                {
+                    len++;
+                    ptr = ptr.next;
+                }
+                // 'count' the number of nodes after which
+                // the new node is to be inserted
+                int count = ((len % 2) == 0) ? (len / 2) :
+                                            (len + 1) / 2;
+                ptr = head;
+
+                // 'ptr' points to the node after which
+                // the new node is to be inserted
+                while (count-- > 1)
+                    ptr = ptr.next;
+
+                // insert the 'newNode' and adjust
+                // the required links
+                newNode.next = ptr.next;
+                ptr.next = newNode;
+            }
+        }
 
 
     }

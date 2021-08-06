@@ -7,7 +7,7 @@ namespace LinkedListTesting
     {
      
         [Test]
-        public void Test1()
+        public void TestIfElement_IsPresent_OrNot()
         {
             LinkedLists list = new LinkedLists();
             list.Add(56);
